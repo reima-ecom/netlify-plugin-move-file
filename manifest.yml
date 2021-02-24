@@ -1,0 +1,5 @@
+name: netlify-plugin-move-file
+inputs:
+  - name: filePath
+    description: Path file that should be moved to the publish dir
+    required: true

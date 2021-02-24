@@ -1,0 +1,24 @@
+{
+  "name": "netlify-plugin-move-file",
+  "version": "1.0.5",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reima-ecom/netlify-plugin-move-file.git"
+  },
+  "keywords": [
+    "netlify",
+    "netlify-plugin",
+    "algolia"
+  ],
+  "author": "Eric Selin (eric.selin@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reima-ecom/netlify-plugin-move-file/issues"
+  },
+  "homepage": "https://github.com/reima-ecom/netlify-plugin-move-file#readme"
+}
