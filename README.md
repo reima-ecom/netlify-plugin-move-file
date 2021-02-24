@@ -1,8 +1,6 @@
-# Algolia Index Refresh Build Plugin
+# Netlify Plugin to Move File into Publish Directory
 
-Build plugin to update an Algolia index based on a JSON file that is rendered into the publish directory. The index is only updated on production builds.
-
-**The specified index will be cleared and then replaced with the records in the the JSON file.**
+Build plugin to move a file into the publish directory. Very useful in order to move logs etc.
 
 ## Installation and Configuration
 
@@ -18,30 +16,29 @@ Currently not supported.
 
     ```toml
     [build]
-      command = "hugo"
+      command = "hugo --logFile hugo-log.txt"
       publish = "public"
 
     [[plugins]]
-      package = "netlify-plugin-refresh-algolia"
+      package = "netlify-plugin-move-file"
         [plugins.inputs]
-        appId = "ALGOLIA_APP"
-        indexName = "algolia-index"
+        filePath = "hugo-log.txt"
     ```
 
 2. From your project's base directory, use `npm`, `yarn`, or any other Node.js package manager to add this plugin to `devDependencies` in `package.json`.
 
     ```
-    npm install -D netlify-plugin-refresh-algolia
+    npm install -D netlify-plugin-move-file
     ```
 
     or
 
     ```
-    yarn add -D netlify-plugin-refresh-algolia
+    yarn add -D netlify-plugin-move-file
     ```
 
 Read more about [file-based plugin installation](https://docs.netlify.com/configure-builds/build-plugins/#file-based-installation) in our docs.
 
 ### Configuration
 
-The Algolia app and index needs to be configured in the `netlify.toml` file and the `ALGOLIA_ADMIN_KEY` build environment variable needs to be set for authentication. See `manifest.yml` for details on the required inputs.
+Specify the file to move via the `filePath` input.

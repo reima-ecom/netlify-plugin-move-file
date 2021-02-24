@@ -1,6 +1,6 @@
 {
   "name": "netlify-plugin-move-file",
-  "version": "1.0.5",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
